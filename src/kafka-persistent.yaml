@@ -36,7 +36,7 @@ spec:
         memory: "16Gi"
       requests:
         cpu: "500m"
-        memory: "512Mb"
+        memory: "512Mi"
   zookeeper:
     replicas: 3
     storage:
@@ -50,7 +50,7 @@ spec:
         memory: "16Gi"
       requests:
         cpu: "500m"
-        memory: "512Mb"
+        memory: "512Mi"
   entityOperator:
     topicOperator:
       reconciliationIntervalSeconds: 90
