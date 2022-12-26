@@ -1,1 +1,0 @@
-# kafka-perf-test
