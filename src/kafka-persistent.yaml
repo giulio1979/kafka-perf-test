@@ -29,6 +29,7 @@ spec:
         type: persistent-claim
         size: 100Gi
         deleteClaim: false
+        class: azurefile
     resources:
       limits:
         cpu: "2"
@@ -42,6 +43,7 @@ spec:
       type: persistent-claim
       size: 100Gi
       deleteClaim: false
+      class: azurefile
     resources:
       limits:
         cpu: "2"
