@@ -10,19 +10,12 @@ metadata:
     control-plane: controller-manager
   name: kubestone-system
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: drills.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: Drill
@@ -510,22 +503,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: esrallies.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.deployed
-    name: Deployed
-    type: boolean
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: EsRally
@@ -1053,19 +1036,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: fios.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: Fio
@@ -2421,19 +2397,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: iopings.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: Ioping
@@ -3779,19 +3748,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: iperf3s.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: Iperf3
@@ -4685,7 +4647,7 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
@@ -6507,19 +6469,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: kafkabenches.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: KafkaBench
@@ -7052,19 +7007,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: ocplogtests.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: OcpLogtest
@@ -7551,19 +7499,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: pgbenches.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: Pgbench
@@ -8070,19 +8011,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: qperves.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: Qperf
@@ -8976,19 +8910,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: s3benches.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: S3Bench
@@ -9595,19 +9522,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: sysbenches.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: Sysbench
@@ -10088,19 +10008,12 @@ status:
   conditions: []
   storedVersions: []
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   creationTimestamp: null
   name: ycsbbenches.perf.kubestone.xridge.io
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.running
-    name: Running
-    type: boolean
-  - JSONPath: .status.completed
-    name: Completed
-    type: boolean
   group: perf.kubestone.xridge.io
   names:
     kind: YcsbBench
