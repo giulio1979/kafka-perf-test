@@ -1,0 +1,32 @@
+apiVersion: perf.kubestone.xridge.io/v1alpha1
+kind: KafkaBench
+metadata:
+  name: kafkabench-sample
+  namespace: kubestone
+spec:
+  image:
+    name: confluentinc/cp-kafka:5.2.1
+
+  # List of ZooKeeper instances we want to connect to
+  zookeepers:
+    - perf-test-cluster-zookeeper-client:2181
+
+  # List of Kafka Broker instances we want to connect to
+  brokers:
+    - perf-test-cluster-kafka-brokers:9092
+
+  ## Define performance tests we want to run against the new cluster
+  tests:
+    - name: "noreplication"
+      # This is the number of instances we will fire up of the kafka-producer/kafka-consumer binaries
+      threads: 2
+      replication: 1
+      partitions: 16
+      recordSize: 100
+      records: 60000000
+      # These can be any official producer Kafka options: https://kafka.apache.org/documentation/#producerconfigs
+      extraProducerOpts:
+        - "buffer.memory=671088640"
+      consumersOnly: false
+      producersOnly: false
+      timeout: 10000
